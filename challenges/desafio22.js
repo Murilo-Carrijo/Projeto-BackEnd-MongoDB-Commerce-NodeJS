@@ -6,7 +6,7 @@ db.produtos.updateOne(
 );
 
 db.produtos.update(
-   { tags: { $elemMatch: { $eq: "bovino" } } },
+   { tags: { $in: ["bovino"] } },
   { $inc: { "vendasPorDia.6": 120 } },
 );
 
